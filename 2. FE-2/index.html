@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "demo"></div>
+
+    <script>
+        fetch("https://api.github.com/users")
+        .then((data) => {
+            return data.json();
+        }).then((actualdata) => {
+            console.log(actualdata);
+            // document.getElementById("demo").innerHTML = actualdata[0].login;
+            let name = "";
+            for(let i=0; i<actualdata.length; i++){
+                console.log((i+1) + "- " + actualdata[i].login);
+                name = name + (i+1) + " " + actualdata[i].login + "<br> ";
+            }
+            document.getElementById("demo").innerHTML = name;
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello</div>
+
+    <script>
+        const api = async () => {
+            const apidata = await fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo");
+            const actualdata = await apidata.json();
+            const data = actualdata["Time Series (Daily)"];
+            console.log(data);
+            if(data["2020-09-23"]){
+                return data["2020-09-23"]["1. open"];
+            }
+        }
+        api();
+    </script>
+</body>
+</html>

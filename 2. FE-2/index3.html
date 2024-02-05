@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Hello
+        <p></p>
+    </div>
+
+    <script>
+        const api = async() => {
+            let apidata = await fetch("https://run.mocky.io/v3/11567d8d-1f53-4a7a-b5f4-8974cf906b1b");
+            let actualdata = await apidata.json();
+            let data = actualdata.problemsetQuestionList.questions;
+            console.log(data);
+            let ans = "";
+            for(let i=0; i<data.length ; i++ ){
+                ans = ans + i+1 +"- " + data[i].title + " <b>" + data[i].difficulty + "</b><br>"; 
+            }
+            document.querySelector("div > p").innerHTML = ans;
+        }
+
+        api()
+    </script>
+</body>
+</html>

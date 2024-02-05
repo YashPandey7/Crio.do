@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "demo">Hello</div>
+
+    <script>
+        const api = async() => {
+            const apidata = await fetch("https://api.github.com/users");
+            const actualdata = await apidata.json();
+            console.log(actualdata);
+            let ans = "";
+            for(let i=0; i<actualdata.length; i++){
+                console.log(actualdata[i].login);
+                ans = ans + (i+1) + "- " + actualdata[i].login + "<br>";
+            }
+            document.querySelector("div").innerHTML = ans;
+        }
+
+        api();
+    </script>
+</body>
+</html>
