@@ -6,30 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Bubbling Event in Javascript</h2> 
-  
-    <div id="parent"> 
-        <button> 
-            <h2>Parent</h2> 
-        </button> 
-        <button id="child"> 
-  
-            <p>Child</p> 
-  
-        </button> 
-    </div><br> 
+    <form action="index7.html" id = "form-id">
+        <input type="text" id="name">
+        <input type="email" id="email">
+        <button type="submit">Submit</button>
+    </form>
   
   
     <script> 
-        document.getElementById( 
-        "child").addEventListener("click", function () { 
-            alert("You clicked the Child element!"); 
-        }, false); 
-          
-        document.getElementById( 
-        "parent").addEventListener("click", function () { 
-            alert("You clicked the parent element!"); 
-        }, false); 
+        let form = document.getElementById("form-id");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Submitted");
+            let name = document.getElementById("name").value;
+            let email = e.target.elements["email"].value;
+            console.log(name, email);
+        });
+
+        // document.getElementById("name").addEventListener("")
     </script> 
 </body>
 </html>

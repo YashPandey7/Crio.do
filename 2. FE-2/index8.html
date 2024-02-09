@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post" id="form-control">
+        <input type="text" name="" id="fname">
+        <input type="email" name="" id="email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const fullname = localStorage.getItem("name");
+          const emailid = localStorage.getItem("emails");
+          if(fullname){
+              fname.value = fullname; 
+          }if(emailid){
+              email.value = emailid;
+          }
+        });
+
+        document.getElementById("fname").addEventListener("blur", (e) => {
+          localStorage.setItem("name", e.target.value);
+        });
+
+        document.getElementById("email").addEventListener("blur", (e) => {
+          localStorage.setItem("emails", e.target.value);
+        });
+    </script>
+</body>
+</html>
