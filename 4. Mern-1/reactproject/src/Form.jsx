@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 
 const Form = () => {
+    const [fullname, setfullname] = useState({
+        fname:'',
+        lname:'',
+    });
 
-    const [name, setname] = useState("");    
-    const [fullname, setfullname] = useState("");
-
-    const inputevent = (event) => {
-        setname(event.target.value);
+    const inputevent = (e) => {
+        const {name, value} = e.target;
+        setfullname((b) => {
+            return {
+                ...b,
+                [name]:value,
+            }
+        });
     }
 
-    const clksubmit = (event) => {
-        event.preventDefault();
-        setfullname(name);
+    const submitform = (e) => {
+        e.preventDefault();
     }
+
 
     return(
         <>
-            <form onSubmit={clksubmit}>
-                <p style={{fontSize:"40px"}}>Hello {fullname}</p>
-                <input type="text" placeholder="Enter your name ..." onChange={inputevent} value={name}/>
+            <form onSubmit={submitform}>
+                <h2>Hi, {fullname.fname} {fullname.lname}</h2>
+                <input type="text" name="fname" placeholder="First name..." onChange={inputevent} value={fullname.fname}/>
+                <input type="text" name="lname" placeholder="Last name..." onChange={inputevent} value={fullname.lname}/>
                 <button type="submit">Submit</button>
             </form>
         </>
