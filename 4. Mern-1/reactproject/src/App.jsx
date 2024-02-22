@@ -2,7 +2,8 @@ import React from 'react';
 // import Increment from './Increment';
 // import Form from './Form';
 import "./index.css";
-import Count from './Count';
+import Home from './TakeHome2/Home';
+// import Count from './Count';
 // import Home from './TakeHome/Home';
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
             {/* <Increment/> */}
             {/* <Form/> */}
             {/* <Home/> */}
-            <Count/>
+            {/* <Count/> */}
+            <Home />
         </>
     );
 }

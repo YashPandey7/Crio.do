@@ -1,11 +1,15 @@
 button{
-    padding:10px;
-    margin: 3px;
+    padding:5px;
+    /* margin: 3px; */
     min-width: 40px;
     cursor: pointer;
 }
 
 img{
-    width: 300px;
+    width: 400px;
     height: 300px;
+}
+
+select, option{
+    cursor: pointer;
 }
