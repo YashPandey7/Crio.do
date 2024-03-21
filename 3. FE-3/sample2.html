@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="radio">
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Others">Others
+    </div>
+    <br>
+    <button type="button" onclick="displayRadioValue()">
+        Submit
+    </button>
+    <br>
+    <div id="result"></div>
+
+    <script>
+
+
+        const displayRadioValue = () => {
+            const radio = document.getElementsByName("gender");
+            for(let i=0; i<radio.length; i++){
+                if(radio[i].checked){
+                    document.getElementById("result").innerHTML = radio[i].value;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>

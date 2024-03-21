@@ -8,11 +8,34 @@
 </head>
 <body>
     <div id="myDiv">
-        Hello <strong>World</strong>!
+        <input type="text">
+        <button type = "button">Submit</button>
+        <p>Hello</p>
     </div>
     
+    <script>
+        // let date = new Date();
+        // document.getElementById('myDiv').innerHTML= date.toLocaleDateString("en-IN");
+        // const btn = document.querySelector("button");
+        // btn.addEventListener("click", () => {
+        //     fetch("/", {
+        //         method : "POST",
+        //         body : JSON.stringify({"name" : "Yash"}),
+        //         headers : {
+        //             "Content-type" : "application/json; charset = UTF-8"
+        //         }
+        //     });
+        //     console.log("Clicked");
+        // });
+        const txt = document.querySelector("input");
+        const btn = document.querySelector('button');
+        const par = document.querySelector("p");
+        txt.setAttribute("placeholder", "Enter your name ...");
+        btn.addEventListener("click", () => {
+            par.style.color = "#008080";
+            par.innerHTML = "<h1>Hello Yash</h1>";
+        })
+
+    </script>
 </body>
 </html>
-<script>
-    document.getElementById('myDiv').innerHTML="Yash";
-</script>
