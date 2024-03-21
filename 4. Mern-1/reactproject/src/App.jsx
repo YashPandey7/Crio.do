@@ -5,6 +5,7 @@ import "./index.css";
 // import Home from './TakeHome3/Home';
 import Snackbar from './Snackbar';
 import { SnackbarProvider } from 'notistack';
+import Hooks from './Hooks';
 // import Home from './TakeHome2/Home';
 // import Count from './Count';
 // import Home from './TakeHome/Home';
@@ -20,9 +21,10 @@ const App = () => {
             {/* <Count/> */}
             {/* <Home /> */}
             {/* <Home /> */}
-            <SnackbarProvider>
+            {/* <SnackbarProvider>
                 <Snackbar />
-            </SnackbarProvider>
+            </SnackbarProvider> */}
+            <Hooks/>
         </>
     );
 }
