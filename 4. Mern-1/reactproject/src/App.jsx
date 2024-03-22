@@ -24,7 +24,7 @@ const App = () => {
             {/* <SnackbarProvider>
                 <Snackbar />
             </SnackbarProvider> */}
-            <Hooks/>
+            {/* <Hooks/> */}
         </>
     );
 }
