@@ -13,4 +13,5 @@ const fs = require("fs");
 // fs.mkdirSync("Sample");
 // fs.writeFileSync("Sample/name.txt", "ahjskdashdiuashdid");
 // console.log(fs.readFileSync("Sample/name.txt", "utf-8"));
-fs.unlinkSync("Sample/name.txt");
+// fs.unlinkSync("Sample/name.txt");
+fs.rmdirSync("Sample");
