@@ -2,7 +2,7 @@ import React from 'react';
 // import Increment from './Increment';
 // import Form from './Form';
 import "./index.css";
-// import Home from './TakeHome3/Home';
+import Home from './TakeHome3/Home';
 import Snackbar from './Snackbar';
 import { SnackbarProvider } from 'notistack';
 import Hooks from './Hooks';
@@ -17,7 +17,7 @@ const App = () => {
             <Card name = "Ansh" Content="Crio.do"/> */}
             {/* <Increment/> */}
             {/* <Form/> */}
-            {/* <Home/> */}
+            <Home/>
             {/* <Count/> */}
             {/* <Home /> */}
             {/* <Home /> */}
@@ -25,6 +25,7 @@ const App = () => {
                 <Snackbar />
             </SnackbarProvider> */}
             {/* <Hooks/> */}
+
         </>
     );
 }
