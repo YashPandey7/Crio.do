@@ -31,6 +31,12 @@ app.get("/contact", (req, res) => {
     });
 });
 
+app.get("*", (req, res) => {
+    res.render("error", {
+        errorComment : "Error : 404 Page Not Found!",
+    });
+});
+
 app.listen(8000, "127.0.0.1", () => {
     console.log("Listening to Port no. 8000");
 });
