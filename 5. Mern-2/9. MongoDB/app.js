@@ -27,18 +27,4 @@ const PlaylistSchema = new mongoose.Schema({
 
 const Playlist = new mongoose.model("Playlist", PlaylistSchema);
 
-// const CreateDocument = async() => {
-//     try{
-//         const reactPlaylist = new Playlist({
-//             name : "Yash",
-//             office : "Crio.do",
-//             age : 22
-//         });
-
-//         const result = await reactPlaylist.save();
-//     }catch(err){
-//         console.log(err);
-//     }
-// }
-
-// CreateDocument();
+module.exports = {Playlist};
